@@ -1,26 +1,26 @@
 p {
-    color: #efefef;
-    font-family: Helvetica Neue, sans-serif;
-    font-weight: 100;
-    letter-spacing: .8px;
-    text-align: justify;
+  color: #efefef;
+  font-family: Helvetica Neue, sans-serif;
+  font-weight: 100;
+  letter-spacing: .8px;
+  text-align: justify;
 }
 
 h1 {
-    color: #efefef;
-    text-align: center;
-    font-weight: 100;
-    font-size: 65px;
-    margin-bottom: 0;
+  color: #efefef;
+  text-align: center;
+  font-weight: 100;
+  font-size: 65px;
+  margin-bottom: 0;
 }
 
 h3 {
-    color: #efefef;
-    font-weight: 100;
+  color: #efefef;
+  font-weight: 100;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
 }

@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1229px) {
+  .navText {
+    display: none;
+  }
+}
+
+.navText {
+  color: #efefef;
+  list-style-type: none;
+  font-weight: 100;
+  line-height: 50px;
+  font-size: 34px;
+  font-family: roboto;
+}
+
+.nav {
+  composes: navText;
+  position: fixed;
+  left: 1000px;
+  top: 0px;
+}
+
+.navStationary {
+  composes: navText;
+  float: left;
+  padding-left: 80px;
+}
+
+.bold {
+  font-weight: 700;
+}

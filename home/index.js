@@ -6,6 +6,7 @@ import Header from './Header';
 import Education from './Education';
 import Experience from './Experience';
 import Projects from './Projects';
+import Nav from './Nav';
 import styles from './styles.css';
 import textStyles from './text.css';
 
@@ -52,7 +53,7 @@ class HomePage extends Component {
         <Header hidden={!headerVisible}/>
         <div className={styles.background}>
           <div className={styles.content}>
-            <Bio ref={(bio) => this.bio =  bio} />
+            <Bio />
             <Education ref={(education) => this.education = education} />
             <Experience ref={(experience) => this.experience = experience} />
             <Projects ref={(projects) => this.projects = projects} />
@@ -60,28 +61,7 @@ class HomePage extends Component {
               © 2016 Michael Probber - michael@probber.com
             </div>
           </div>
-          <ul className={headerVisible ? styles.nav : styles.navStationary}>
-            <a href='#about'>
-              <li className={activeSection === 1 ? styles.bold : ''} >
-                About Me
-              </li>
-            </a>
-            <a href='#education'>
-              <li className={activeSection === 2 ? styles.bold : ''} >
-                Education
-              </li>
-            </a>
-            <a href='#experience'>
-              <li className={activeSection === 3 ? styles.bold : ''} >
-                Experience
-              </li>
-            </a>
-            <a href='#projects'>
-              <li className={activeSection === 4 ? styles.bold : ''} >
-                Projects
-              </li>
-            </a>
-          </ul>
+          <Nav {...this.state} />
         </div>
       </div>
     );
