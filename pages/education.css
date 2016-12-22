@@ -1,0 +1,12 @@
+.main {
+  padding-top: 20px;
+}
+
+.classList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.classList p {
+  margin-left: 30px;
+}

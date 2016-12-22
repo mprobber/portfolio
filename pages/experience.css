@@ -1,0 +1,24 @@
+.main {
+  color: #efefef;
+  padding-top: 20px;
+  margin-top: -20px;
+}
+
+.main li {
+  display: block;
+}
+
+.main h3 {
+  float: left;
+  font-weight: 800;
+}
+
+.main h4 {
+  font-weight: 100;
+  color: #efefef;
+  float: right;
+}
+
+.clearFix {
+  clear: both;
+}

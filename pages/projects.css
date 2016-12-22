@@ -1,0 +1,31 @@
+.main {
+  color: #efefef;
+  padding-top: 20px;
+}
+
+.main h3 {
+  font-weight: 700;
+}
+
+.main a {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.example {
+  width: 190px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+
+.images {
+  text-align: center;
+}
+
+.video {
+  text-align: center;
+}
