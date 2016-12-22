@@ -98,7 +98,7 @@ tasks.set('build', () => {
 // -----------------------------------------------------------------------------
 tasks.set('publish', () => {
   const remote = {
-    url: 'https://github.com/mprobber/mprobber.github.io.git',
+    url: 'https://github.com/mprobber/portfolio',
     branch: 'gh-pages',
   };
   global.DEBUG = process.argv.includes('--debug') || false;
