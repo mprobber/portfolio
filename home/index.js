@@ -1,13 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
-import Conway from '../Conway';
-import Bio from '../Bio';
-import Header from '../Header';
-import Education from '../Education';
-import Experience from '../Experience';
-import Projects from '../Projects';
+import Conway from './Conway';
+import Bio from './Bio';
+import Header from './Header';
+import Education from './Education';
+import Experience from './Experience';
+import Projects from './Projects';
 import styles from './styles.css';
-import textStyles from '../text.css';
+import textStyles from './text.css';
 
 class HomePage extends Component {
   state = {
