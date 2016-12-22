@@ -19,8 +19,7 @@ const path = require('path');
 // TODO: Update configuration settings
 const config = {
   title: 'Michael Probber',        // Your website title
-  url: 'https://rsb.kriasoft.com',          // Your website URL
-  project: 'react-static-boilerplate',      // Firebase project. See README.md -> How to Deploy
+  url: 'https://mprobber.github.io/',          // Your website URL
   trackingID: 'UA-XXXXX-Y',                 // Google Analytics Site's ID
 };
 
@@ -98,8 +97,8 @@ tasks.set('build', () => {
 // -----------------------------------------------------------------------------
 tasks.set('publish', () => {
   const remote = {
-    url: 'https://github.com/mprobber/portfolio',
-    branch: 'gh-pages',
+    url: 'https://github.com/mprobber/mprobber.github.io',
+    branch: 'master',
   };
   global.DEBUG = process.argv.includes('--debug') || false;
   const spawn = require('child_process').spawn;
