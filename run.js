@@ -14,6 +14,7 @@ const fs = require('fs');
 const del = require('del');
 const ejs = require('ejs');
 const webpack = require('webpack');
+const path = require('path');
 
 // TODO: Update configuration settings
 const config = {
