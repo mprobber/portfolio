@@ -9,8 +9,8 @@ export default class Education extends Component {
       <div className={styles.main} id='education'>
         <h1>Education</h1>
         <p>
-          I graduated in 2015 from <strong>Carnegie Mellon University</strong>
-          with a <strong>BS degree in Information Systems and an additional
+          I graduated in 2015 from <strong>Carnegie Mellon University</strong> with
+          a <strong>BS degree in Information Systems and an additional
           major in Computer Science</strong>.  My Information Systems classes
           taught me a lot about software development and business practices,
           whereas my Computer Science classes gave me the theoretical
