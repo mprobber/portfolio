@@ -122,8 +122,6 @@ tasks.set('publish', () => {
     )
     .then(() => git('ls-remote', '--exit-code', remote.url, 'master')
       .then(() => Promise.resolve()
-        .then(() => git('fetch', 'origin'))
-        .then(() => git('reset', `origin/${remote.branch}`, '--hard'))
         .then(() => git('clean', '--force'))
       )
       .catch(() => Promise.resolve())
