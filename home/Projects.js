@@ -90,8 +90,8 @@ export default class Projects extends Component {
           <p>
             Let's move Pittsburgh is a nonprofit organization that was created
             as a part of Michelle Obama's "Let's Move" program.  Our team of 4
-            worked with them to create a phone-gap based Application that could
-            scan barcodes of products, and match them up to nutrition facts, and
+            worked with them to create a <strong>phone-gap based Application</strong> that
+            could scan barcodes of products, and match them up to nutrition facts, and
             give an overall "red-yellow-green" rating for fats, carbohydrates,
             and proteins in various foods.  I personally built on the backend
             in rails, integrated the application with a native barcode scanner,
