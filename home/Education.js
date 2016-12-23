@@ -87,8 +87,8 @@ export default class Education extends Component {
           </li>
         </ul>
         <p>
-          Next spring semester I will also be beginning a
-          <strong> Japanese </strong> course as a part-time student at City
+          Next spring semester I will also be beginning
+          a <strong>Japanese</strong> course as a part-time student at City
           College of San Francisco on the weekends.
         </p>
       </div>
