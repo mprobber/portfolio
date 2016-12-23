@@ -14,12 +14,19 @@
 
 .example {
   width: 190px;
+  height: 190px;
   display: inline-block;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 20px;
   vertical-align: middle;
   margin-bottom: 20px;
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+  -webkit-transform: rotate(0.000001deg);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .images {
