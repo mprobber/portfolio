@@ -23,21 +23,16 @@ export default class Projects extends Component {
           </div>
           <p>Intention was a sponsored art project for Burning Man 2016.  It's
           a structure based on cellular tensegrity.  That is, it's held together
-          by the tension on outer wires, with a responsive light-up "nucleus" in
-          the center.  My work on tensegrity included
-            <a href="https://vimeo.com/196778600">
+          by the tension on outer wires, with a responsive light-up "nucleus"
+            in <a href="https://vimeo.com/196778600">
               creating
-            </a> a
-            <a href="https://vimeo.com/196778574">
+            </a> a <a href="https://vimeo.com/196778574">
               simulator
-            </a> to
-            <a href="https://vimeo.com/196778553">
+            </a> to <a href="https://vimeo.com/196778553">
               construct animations on the LEDs
-            </a>, writing a
-            <a href="https://github.com/mprobber/intention">
+            </a>, writing a <a href="https://github.com/mprobber/intention">
               framework to control the LEDs via a Beaglebone
-            </a>, and writing
-            <a href="https://github.com/mprobber/intention/tree/master/animations">
+            </a>, and writing <a href="https://github.com/mprobber/intention/tree/master/animations">
               scripts that took in live audio, processed them using Fast Fourier
               Transforms, and outputted some visualization onto the LEDs, alongside
               other animations
@@ -60,7 +55,7 @@ export default class Projects extends Component {
             up requested courrier routes that are along your way.  I programmed
             the electronics and prototyped the application as a proof-of-concept,
             while the team of designers worked on making the bag and designing
-            the UX.  The project won <strong>Best Wearable, second-best use of
+            the UX.  The project won <strong>best wearable, second-best use of
             Google Maps API, and best IndieGoGo Campaign</strong> at PennApps 2014.
           </p>
           <div className={styles.video} dangerouslySetInnerHTML={{
