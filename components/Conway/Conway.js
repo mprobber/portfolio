@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import styles from './conway.css';
 
 // Kind of brutal, but I drew this out, and then looked up the rows...
@@ -24,11 +24,10 @@ name.set(13, new Set([4, 9, 11, 17, 14, 19, 22, 24, 27, 29, 34, 36]));
 //prettier-ignore
 name.set(14, new Set([4, 9, 12, 16, 15, 19, 20, 21, 24, 25, 26, 29, 30, 31, 32, 34, 37]));
 
-export default class Conway extends Component {
-  static propTypes = {
-    height: PropTypes.number,
-  };
-
+type Props = {
+  height: number,
+};
+export default class Conway extends Component<Props> {
   state = {
     board: name,
     width: 0,

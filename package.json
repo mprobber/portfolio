@@ -11,7 +11,12 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1"
   },
+  "peerDependencies": {
+    "webpack-dev-server": "^3.1.10"
+  },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "yarn build:static",
+    "build:static": "webpack --mode=\"production\""
   }
 }
