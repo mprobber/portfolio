@@ -1,0 +1,41 @@
+@media only screen and (max-width: 1229px) {
+  .navText {
+    display: none;
+  }
+}
+
+.navText {
+  color: #efefef;
+  list-style-type: none;
+  font-weight: 100;
+  line-height: 50px;
+  font-size: 34px;
+  font-family: roboto;
+}
+
+.nav {
+  color: #efefef;
+  list-style-type: none;
+  font-weight: 100;
+  line-height: 50px;
+  font-size: 34px;
+  font-family: roboto;
+  position: fixed;
+  left: 1000px;
+  top: 0px;
+}
+
+.navStationary {
+  color: #efefef;
+  list-style-type: none;
+  font-weight: 100;
+  line-height: 50px;
+  font-size: 34px;
+  font-family: roboto;
+  float: left;
+  padding-left: 80px;
+}
+
+.bold {
+  font-weight: 700;
+}

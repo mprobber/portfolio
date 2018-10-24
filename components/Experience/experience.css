@@ -1,0 +1,37 @@
+.main {
+  color: #efefef;
+  padding-top: 20px;
+  margin-top: -20px;
+}
+
+.main li {
+  display: block;
+}
+
+.main h3 {
+  font-weight: 800;
+}
+
+.main h4 {
+  font-weight: 100;
+  color: #efefef;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h3 {
+  display: block;
+}
+
+.title h4 {
+  display: block;
+}
