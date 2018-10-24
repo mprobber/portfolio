@@ -17,6 +17,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "yarn build:static",
+    "publish:pages": "node githubPagesPublish.js",
     "build:static": "webpack --mode=\"production\""
   }
 }
