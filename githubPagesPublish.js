@@ -8,6 +8,12 @@ async function runPublish() {
   execSync('git rm * -r');
   execSync('git add .');
   execSync('git commit -m "Automated publish"');
+  try {
+    execSync('git push origin gh-pages');
+  } catch (e) {
+    // eslint-disable-next-line
+    console.error(e);
+  }
   execSync(`git checkout ${branchName}`);
 }
 
