@@ -5,7 +5,7 @@ async function runPublish() {
   execSync('yarn run build:static');
   const branchName = await BranchName.get();
   execSync('git checkout gh-pages');
-  execSync('git rm *');
+  execSync('git rm * -r');
   execSync('git add .');
   execSync('git commit -m "Automated publish"');
   execSync(`git checkout ${branchName}`);
