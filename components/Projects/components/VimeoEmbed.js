@@ -2,7 +2,7 @@
 import React from 'react';
 
 type Props = {
-  id: number,
+  id: string,
 };
 
 const VimeoEmbed = ({ id }: Props) => (

@@ -12,7 +12,7 @@ import {
 import { InstagramEmbed, VimeoEmbed } from './components';
 import styles from './projects.css';
 
-export default class Projects extends Component {
+export default class Projects extends Component<{}> {
   render() {
     return (
       <div id="projects" className={styles.main}>
