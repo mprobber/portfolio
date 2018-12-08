@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Helmet } from 'react-helmet';
 import Conway from '../Conway';
 import Bio from '../Bio';
 import Header from '../Header';
@@ -45,22 +46,31 @@ class HomePage extends Component {
   render() {
     const { headerVisible } = this.state;
     return (
-      <div ref={main => (this.main = main)}>
-        <div ref={conway => (this.conway = conway)}>
-          <Conway width={40} height={16} />
-        </div>
-        <Header hidden={!headerVisible} />
-        <div className={styles.background}>
-          <div className={styles.content}>
-            <Bio />
-            <Education ref={education => (this.education = education)} />
-            <Experience ref={experience => (this.experience = experience)} />
-            <Projects ref={projects => (this.projects = projects)} />
-            <div className={styles.copyright}>
-              © 2016 Michael Probber - michael@probber.com
-            </div>
+      <div>
+        <Helmet>
+          <title>Michael Probber</title>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:100,400,400italic,500,500italic,700,700italic"
+          />
+        </Helmet>
+        <div ref={main => (this.main = main)}>
+          <div ref={conway => (this.conway = conway)}>
+            <Conway width={40} height={16} />
           </div>
-          <Nav {...this.state} />
+          <Header hidden={!headerVisible} />
+          <div className={styles.background}>
+            <div className={styles.content}>
+              <Bio />
+              <Education ref={education => (this.education = education)} />
+              <Experience ref={experience => (this.experience = experience)} />
+              <Projects ref={projects => (this.projects = projects)} />
+              <div className={styles.copyright}>
+                © 2016 Michael Probber - michael@probber.com
+              </div>
+            </div>
+            <Nav {...this.state} />
+          </div>
         </div>
       </div>
     );

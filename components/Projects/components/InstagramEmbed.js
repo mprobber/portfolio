@@ -8,7 +8,7 @@ type Props = {
 const InstagramEmbed = ({ src }: Props) => (
   <div>
     <iframe
-      allowtransparency="true"
+      allowTransparency="true"
       style={{ marginTop: -50, marginLeft: -10 }}
       frameBorder="0"
       height="710"
