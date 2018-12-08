@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Helmet } from 'react-helmet';
+import favicon from '../../assets/favicon.ico';
 import Conway from '../Conway';
 import Bio from '../Bio';
 import Header from '../Header';
@@ -53,6 +54,7 @@ class HomePage extends Component {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:100,400,400italic,500,500italic,700,700italic"
           />
+          <link rel="icon" href={favicon} />
         </Helmet>
         <div ref={main => (this.main = main)}>
           <div ref={conway => (this.conway = conway)}>
