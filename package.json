@@ -11,8 +11,8 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-helmet": "^5.2.0",
-    "@mprobber/static-build": "1.0.0",
-    "@mprobber/publish-pages": "1.0.0"
+    "@mprobber/static-build": "latest",
+    "@mprobber/publish-pages": "latest"
   },
   "peerDependencies": {
     "webpack-dev-server": "^3.1.10"
