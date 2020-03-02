@@ -28,6 +28,7 @@ const BottomNav = ({ active, onChange }) => {
 };
 
 const NavLink = styled.a`
+  cursor: pointer;
   text-decoration: none;
   font-weight: ${({ bold }) => (bold ? '700' : '200')};
 `;
