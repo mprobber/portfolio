@@ -42,6 +42,9 @@ export default class Conway extends Component<Props> {
       setTimeout(timeout, 200);
     };
     this.timeout = setTimeout(timeout, 200);
+    setTimeout(() => {
+      this.setState({ paused: false });
+    }, 4000);
 
     // if the screen resizes, update the dimensions of the board
     const updateDimensions = () => {
@@ -55,7 +58,6 @@ export default class Conway extends Component<Props> {
 
   componentWillUnmount() {
     clearTimeout(this.timeout);
-    window.removeEventListener('resize');
   }
 
   fillCell(x, y, board) {

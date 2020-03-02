@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Helmet } from 'react-helmet';
-import favicon from '../../assets/favicon.ico';
+import React, { useRef, useEffect, useState } from 'react';
+import styled from 'styled-components';
 import Conway from '../Conway';
 import Bio from '../Bio';
 import Header from '../Header';
@@ -9,74 +7,83 @@ import Education from '../Education';
 import Experience from '../Experience';
 import Projects from '../Projects';
 import Nav from '../Nav';
-import styles from './root.css';
+import BottomNav from '../BottomNav';
 
-class HomePage extends Component {
-  state = {
-    headerVisible: false,
-    activeSection: 1,
-  };
+function useOnScreen(ref, rootMargin = '0px') {
+  // State and setter for storing whether element is visible
+  const [isIntersecting, setIntersecting] = useState(false);
 
-  _getActiveSection() {
-    const proj = ReactDOM.findDOMNode(this.projects).getBoundingClientRect();
-    if (proj.top - 20 <= 0) return 4;
-    const exp = ReactDOM.findDOMNode(this.experience).getBoundingClientRect();
-    if (exp.top - 20 <= 0) return 3;
-    const edu = ReactDOM.findDOMNode(this.education).getBoundingClientRect();
-    if (edu.top - 20 <= 0) return 2;
-    return 1;
-  }
-
-  _handleScroll = () => {
-    const conway = ReactDOM.findDOMNode(this.conway).getBoundingClientRect();
-    const activeSection = this._getActiveSection();
-    this.setState({
-      headerVisible: conway.bottom <= 0,
-      activeSection,
-    });
-  };
-
-  componentDidMount() {
-    window.addEventListener('scroll', this._handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this._handleScroll);
-  }
-
-  render() {
-    const { headerVisible } = this.state;
-    return (
-      <div>
-        <Helmet>
-          <title>Michael Probber</title>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:100,400,400italic,500,500italic,700,700italic"
-          />
-          <link rel="icon" href={favicon} />
-        </Helmet>
-        <div ref={main => (this.main = main)}>
-          <div ref={conway => (this.conway = conway)}>
-            <Conway width={40} height={16} />
-          </div>
-          <Header hidden={!headerVisible} />
-          <div className={styles.background}>
-            <div className={styles.content}>
-              <Bio />
-              <Education ref={education => (this.education = education)} />
-              <Experience ref={experience => (this.experience = experience)} />
-              <Projects ref={projects => (this.projects = projects)} />
-              <div className={styles.copyright}>
-                © 2016 Michael Probber - michael@probber.com
-              </div>
-            </div>
-            <Nav {...this.state} />
-          </div>
-        </div>
-      </div>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Update our state when observer callback fires
+        setIntersecting(entry.isIntersecting);
+      },
+      {
+        rootMargin,
+      },
     );
-  }
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      observer.unobserve(ref.current);
+    };
+  }, []); // Empty array ensures that effect is only run on mount and unmount
+
+  return isIntersecting;
 }
 
+const HomePage = () => {
+  const [activeSection, setActiveSection] = useState('about');
+  const conwayGame = useRef(null);
+  const headerVisible = useOnScreen(conwayGame);
+  return (
+    <Background>
+      <div ref={conwayGame}>
+        <Conway width={40} height={16} />
+      </div>
+      <Header hidden={headerVisible} />
+      <Content>
+        {activeSection === 'about' && <Bio />}
+        {activeSection === 'education' && <Education />}
+        {activeSection === 'work' && <Experience />}
+        {activeSection === 'projects' && <Projects />}
+        <Copyright>© 2020 Michael Probber - web@mikep.ro</Copyright>
+      </Content>
+      <BottomNav onChange={setActiveSection} active={activeSection} />
+    </Background>
+  );
+};
+
 export default HomePage;
+
+const Background = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  background-color: #585858;
+`;
+
+const Content = styled.div`
+  max-width: 900px;
+  padding-left: 30px;
+  padding-right: 30px;
+  float: left;
+
+  @media only screen and (max-width: 1229px) {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+`;
+
+const Copyright = styled.div`
+  font-family: roboto;
+  font-weight: 100;
+  text-align: center;
+  padding: 40px;
+  color: #888;
+  margin-bottom: 20px;
+`;

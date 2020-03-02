@@ -85,7 +85,7 @@ export default props => {
       <div className={styles.initials}>{makeName()}</div>
       <div className={styles.section}>{props.headerText}</div>
       <div className={styles.contact}>
-        <a href="mailto:michael@probber.com">
+        <a href="mailto:web@mikep.ro">
           <div className={styles.icon}>{emailIcon}</div>
         </a>
         <a href="http://github.com/mprobber">
