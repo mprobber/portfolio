@@ -89,10 +89,6 @@ const ContentContainer = styled.div`
   flex-grow: 1;
 `;
 
-const Dummy = styled.div`
-  height: 500vh;
-`;
-
 const Content = styled.div`
   padding-left: 30px;
   padding-right: 30px;

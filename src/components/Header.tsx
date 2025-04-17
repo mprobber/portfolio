@@ -64,7 +64,7 @@ export default (props: { hidden: boolean }) => {
         {letters.map((row, i) => {
           return (
             <GridRow key={i}>
-              {row.map((highlighted, j) => (
+              {row.map((highlighted) => (
                 <GridItem $highlighted={highlighted} />
               ))}
             </GridRow>
